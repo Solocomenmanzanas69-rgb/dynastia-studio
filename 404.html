@@ -1,12 +1,12 @@
 <!doctype html><html lang="es"><head><meta charset="utf-8"><title>Dynastia Studio</title>
 <meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex">
 <style>body{font-family:system-ui;background:#0b0b0d;color:#eee;display:grid;place-items:center;height:100vh;margin:0}a{color:#d6b465}</style>
-</head><body><p>Abriendo Dynastia Studio... <a id="go" href="https://sky-advocate-granny-towers.trycloudflare.com">entrar</a></p>
+</head><body><p>Abriendo Dynastia Studio... <a id="go" href="https://blond-chubby-champions-regards.trycloudflare.com">entrar</a></p>
 <script>
 var p = location.pathname, rest = p.indexOf("/dynastia-studio") === 0 ? p.slice("/dynastia-studio".length) : p;
 var tail = (rest || "/") + location.search + location.hash;
 function go(base) { var d = base.replace(/\/+$/, "") + tail; document.getElementById("go").href = d; location.replace(d); }
-var done = false, t = setTimeout(function () { if (!done) { done = true; go("https://sky-advocate-granny-towers.trycloudflare.com"); } }, 4000);
+var done = false, t = setTimeout(function () { if (!done) { done = true; go("https://blond-chubby-champions-regards.trycloudflare.com"); } }, 4000);
 fetch("https://api.github.com/repos/Solocomenmanzanas69-rgb/dynastia-studio/contents/enlace.txt?t=" + Date.now(), { headers: { Accept: "application/vnd.github.raw" }, cache: "no-store" })
   .then(function (r) { return r.ok ? r.text() : Promise.reject(); })
   .then(function (u) { u = u.trim(); if (!done && /^https:\/\/[a-z0-9-]+\.trycloudflare\.com$/.test(u)) { done = true; clearTimeout(t); go(u); } })
